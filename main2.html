@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranav Sadagopan - Data Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    animation: {
+                        'gradient': 'gradient 8s linear infinite',
+                    },
+                    keyframes: {
+                        'gradient': {
+                            to: { 'background-position': '200% center' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .animated-gradient-text {
+            font-weight: bold;
+            background: linear-gradient(to right, #3b82f6, #4695ca, #3b82f6);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: gradientFlow 5s ease infinite;
+        }
+
+        @keyframes gradientFlow {
+            0% {
+                background-position: 0% center;
+            }
+
+            50% {
+                background-position: 100% center;
+            }
+
+            100% {
+                background-position: 0% center;
+            }
+        }
+
+        .animated-gradient {
+            background-size: 200% auto;
+            animation: gradient 8s linear infinite;
+        }
+
+        .skill-box {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .skill-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-box:hover img {
+            transform: scale(1.1);
+        }
+
+        .card {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn {
+            transition: all 0.2s ease-in-out;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <div class="container mx-auto px-4 pb-8">
+        <div class="flex justify-end pt-4">
+            <button id="themeToggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                <svg class="w-6 h-6 text-yellow-500 dark:text-gray-400" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <div class="py-6 animate-fadeIn text-center">
+            <h1 class="mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
+                <span
+                    class="animated-gradient text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-emerald-600">
+                    Pranav Sadagopan
+                </span>
+            </h1>
+            <p class="text-xl mb-6 animated-gradient-text ">Data Engineer</p>
+            <div class="flex flex-wrap justify-center space-x-4 text-sm sm:text-base font-semibold">
+                <!-- <a href="mailto:example@gmail.com"
+                    class="link hover:text-sky-500 dark:hover:text-sky-400 flex items-center space-x-2 mb-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                    </svg>
+                    <span>Email</span>
+                </a>
+                <a href="tel:+91 122334455"
+                    class="link hover:text-sky-500 dark:hover:text-sky-400 flex items-center space-x-2 mb-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">
+                        </path>
+                    </svg>
+                    <span>+91 9962271690</span>
+                </a> -->
+                <a href="https://github.com/pranav1699"
+                    class="link hover:text-sky-500 dark:hover:text-sky-400 flex items-center space-x-2 mb-2"
+                    target="_blank" rel="noopener noreferrer">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                    </svg>
+                    <span>Github</span>
+                </a>
+                <a href="https://www.linkedin.com/in/pranav-sadagopan/"
+                    class="link hover:text-sky-500 dark:hover:text-sky-400 flex items-center space-x-2 mb-2"
+                    target="_blank" rel="noopener noreferrer">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://medium.com/@pranavsadagopan"
+                    class="link hover:text-sky-500 dark:hover:text-sky-400 flex items-center space-x-2 mb-2"
+                    target="_blank" rel="noopener noreferrer">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
+                    </svg>
+                    <span>Medium</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="section my-12" data-aos="fade-up">
+            <h2 class="text-2xl font-bold mb-6">Skills</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-all duration-700 ease-out duration-300 flex flex-col items-center justify-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                        class="w-12 h-12 mb-2" alt="AWS" />
+                    <span class="font-semibold">AWS</span>
+                </div>
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-all duration-700 ease-out duration-300 flex flex-col items-center justify-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                        class="w-12 h-12 mb-2" alt="Python" />
+                    <span class="font-semibold">Python</span>
+                </div>
+                <!-- Add more skill boxes here -->
+
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-all duration-700 ease-out duration-300 flex flex-col items-center justify-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                        alt="SQL" class="w-12 h-12 mb-2" />
+                    <span class="font-semibold">SQL</span>
+                </div>
+
+                <!-- Big Data Frameworks -->
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-all duration-700 ease-out duration-300 flex flex-col items-center justify-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachespark/apachespark-original.svg"
+                        alt="PySpark" class="w-12 h-12 mb-2" />
+                    <span class="font-semibold">PySpark</span>
+                </div>
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-all duration-700 ease-out duration-300 flex flex-col items-center justify-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apacheairflow/apacheairflow-original.svg"
+                        alt="Apache Airflow" class="w-12 h-12 mb-2" />
+                    <span class="font-semibold">Apache Airflow</span>
+                </div>
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-all duration-700 ease-out duration-300 flex flex-col items-center justify-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg"
+                        alt="Kafka" class="w-12 h-12 mb-2" />
+                    <span class="font-semibold">Kafka</span>
+                </div>
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-all duration-700 ease-out duration-300 flex flex-col items-center justify-center">
+                    <img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Superset-logo-0UkA.png"
+                        alt="Apache Superset" class="w-12 h-12 mb-2" />
+                    <span class="font-semibold">Apache Superset</span>
+                </div>
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-all duration-700 ease-out duration-300 flex flex-col items-center justify-center">
+                    <img src="https://user-images.githubusercontent.com/45159366/137402839-249e866b-44e0-4d8c-87d0-dd6c46b5c06a.png"
+                        alt="Flink SQL" class="w-12 h-12 mb-2" />
+                    <span class="font-semibold">Flink SQL</span>
+                </div>
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-all duration-700 ease-out duration-300 flex flex-col items-center justify-center">
+                    <img src="https://git.lab.sspcloud.fr/to-be-continuous/dbt/-/avatar" alt="dbt"
+                        class="w-12 h-12 mb-2" />
+                    <span class="font-semibold">dbt</span>
+                </div>
+
+                <!-- Data Lakes -->
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-all duration-700 ease-out duration-300 flex flex-col items-center justify-center">
+                    <img src="https://www.dremio.com/wp-content/uploads/2021/06/iceberg-logo-with-name.png"
+                        alt="Apache Iceberg" class="w-12 h-12 mb-2" />
+                    <span class="font-semibold">Apache Iceberg</span>
+                </div>
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-all duration-700 ease-out duration-300 flex flex-col items-center justify-center">
+                    <img src="https://cdn.sanity.io/images/97bpcflt/production/51173702d3e3d3325ac86c04e88540cdade88ea8-1000x970.svg?bg=0fff&w=80&fit=crop&dpr=2&fm=webp&h=78"
+                        alt="Delta Lake" class="w-12 h-12 mb-2" />
+                    <span class="font-semibold">Delta Lake</span>
+                </div>
+
+                <!-- Operating Systems -->
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-all duration-700 ease-out duration-300 flex flex-col items-center justify-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"
+                        class="w-12 h-12 mb-2" />
+                    <span class="font-semibold">Linux</span>
+                </div>
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-all duration-700 ease-out duration-300 flex flex-col items-center justify-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original.svg"
+                        alt="Windows" class="w-12 h-12 mb-2" />
+                    <span class="font-semibold">Windows</span>
+                </div>
+
+                <!-- DevOps -->
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-all duration-700 ease-out duration-300 flex flex-col items-center justify-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                        alt="Docker" class="w-12 h-12 mb-2" />
+                    <span class="font-semibold">Docker</span>
+                </div>
+                <div
+                    class="skill-box bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md transition-all duration-700 ease-out duration-300 flex flex-col items-center justify-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"
+                        alt="Jenkins" class="w-12 h-12 mb-2" />
+                    <span class="font-semibold">Jenkins</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section my-12" data-aos="fade-up">
+            <h2 class="text-2xl font-bold mb-6">Personal Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div
+                    class="card rounded-lg bg-white dark:bg-gray-800 shadow-xl transition-all duration-700 ease-out duration-300">
+                    <div class="card-body p-6 ">
+                        <div class="card-thumbnail" style="background-image: url('https://miro.medium.com/v2/resize:fit:4800/format:webp/1*PGeij70mzYcG2HcFkfZ0Gw.png');"></div>
+                        <h3 class="card-title text-xl font-bold mb-2">Apache Flink-Driven Real-time CDC Pipeline</h3>
+                        <p class="mb-4">Real-time CDC data streaming pipeline from MySQL to Apache Iceberg using Apache
+                            Flink.</p>
+                        <div class="card-actions flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="badge bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 px-2 py-1 rounded">Flink
+                                SQL</span>
+                            <span
+                                class="badge bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 px-2 py-1 rounded">Apache
+                                Iceberg</span>
+                            <span
+                                class="badge bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 px-2 py-1 rounded">Hive
+                                Metastore</span>
+                            <span
+                                class="badge bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 px-2 py-1 rounded">S3</span>
+                            <span
+                                class="badge bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 px-2 py-1 rounded">MySQL</span>
+                        </div>
+                        <div class="p-2"></div>
+                        <div class="card-actions justify-end">
+                            <a href="https://github.com/pranav1699/flink-iceberg-minio-trino"
+                                class="btn bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded" target="_blank" rel="noopener noreferrer">Github</a>
+                            <a href="https://medium.com/dev-genius/streaming-cdc-data-from-mysql-to-apache-iceberg-with-hive-metastore-using-apache-flink-0de9738fba0d"
+                                class="btn bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded" target="_blank" rel="noopener noreferrer">Medium</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more project cards here -->
+                 
+                <div
+                    class="card rounded-lg bg-white dark:bg-gray-800 shadow-xl transition-all duration-700 ease-out duration-300">
+                    <div class="card-body p-6">
+                        <h3 class="card-title text-xl font-bold mb-2">Speeding Insights: F1 Telemetry Data Pipeline</h3>
+                        <p class="mb-4">Scalable telemetry data pipeline for analyzing Formula One racing data using
+                            Apache Spark.</p>
+                        <div class="card-actions flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="badge bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 px-2 py-1 rounded">PySpark</span>
+                            <span
+                                class="badge bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 px-2 py-1 rounded">Airflow</span>
+                            <span
+                                class="badge bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 px-2 py-1 rounded">dbt</span>
+                            <span
+                                class="badge bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 px-2 py-1 rounded">Apache
+                                Iceberg</span>
+                            <span
+                                class="badge bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 px-2 py-1 rounded">S3</span>
+                            <span
+                                class="badge bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 px-2 py-1 rounded">Trino</span>
+                        </div>
+                        <div class="p-2"></div>
+                        <div class="card-actions justify-end">
+                            <a href="https://github.com/pranav1699/Speeding_Insights"
+                                class="btn bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded" target="_blank" rel="noopener noreferrer">Github</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+        });
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+    </script>
+</body>
+
+</html>
